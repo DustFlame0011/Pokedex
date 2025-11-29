@@ -1,4 +1,4 @@
-import { pokemonListServices } from "./pokemonList";
-import { pokemonDetailServices } from "./pokemonList";
+import { pokemonListServices, } from "./pokemonList";
+import { pokemonDetailServices } from "./pokemonDetail";
 
 export default { pokemonListServices, pokemonDetailServices }

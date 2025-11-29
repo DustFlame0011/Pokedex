@@ -1,7 +1,7 @@
 import type { Type } from "@/interface/pokemonDetail";
 import { Link } from "react-router-dom";
 
-interface PokemonCardProps {
+interface PokemonCardProps { 
    image: string
    name: string
    id: number
