@@ -22,13 +22,13 @@ A modern and responsive **Pokédex** web application built with **React**, **Tai
 ---
 
 ## Features
-- 🔍 **Search Pokémon** by name  
-- 🗂 **Filter by Generation**  
-- 📄 **Detailed Pokémon Info** (stats, types, images)  
-- ⚡ **Fast State Management** powered by Zustand  
-- 🎨 **Modern UI/UX** with TailwindCSS  
-- 📱 **Fully Responsive** across all devices  
-- ♻️ **Clean and Reusable Component Architecture**  
+- **Search Pokémon** by name  
+- **Filter by Generation**  
+- **Detailed Pokémon Info** (stats, types, images)  
+- **Fast State Management** powered by Zustand  
+- **Modern UI/UX** with TailwindCSS  
+- **Fully Responsive** across all devices  
+- **Clean and Reusable Component Architecture**  
 
 ---
 
