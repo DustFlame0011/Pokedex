@@ -1,12 +1,13 @@
 import type { IPokemonDetailResponse } from "@/interface/pokemonDetail";
 import { pokemonDetailServices } from "@/services/pokemonDetail";
+import type { IResponse } from "@/utils/handleResponse";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 type pokemonType = {
     data: IPokemonDetailResponse | undefined,
     loading: boolean,
-    error: null | any,
+    error: null | IResponse['error'],
 }
 
 const DetailPage = () => {
@@ -17,28 +18,28 @@ const DetailPage = () => {
         error: null
     })
 
-    const callData = async (name: string) => {
-        const response = await pokemonDetailServices.getPokemonDetail(name)
-        if (response.status === 200) {
-            console.log('reasponse', response.data);
-
-            if (response.data)
-                setPokemon({
-                    data: {
-                        ...response.data,
-                        image:
-                            response.data.sprites.other.dream_world.front_default ||
-                            response.data.sprites.other['official-artwork'].front_default,
-                    },
-                    loading: false,
-                    error: null,
-                })
-        } else {
-            setPokemon({ data: undefined, loading: false, error: response.error, });
-        }
-    }
-
     useEffect(() => {
+        const callData = async (name: string) => {
+            const response = await pokemonDetailServices.getPokemonDetail(name)
+            if (response.status === 200) {
+                console.log('response', response.data);
+
+                if (response.data)
+                    setPokemon({
+                        data: {
+                            ...response.data,
+                            image:
+                                response.data.sprites.other.dream_world.front_default ||
+                                response.data.sprites.other['official-artwork'].front_default,
+                        },
+                        loading: false,
+                        error: null,
+                    })
+            } else {
+                setPokemon({ data: undefined, loading: false, error: response.error, });
+            }
+        }
+
         if (name)
             callData(name)
     }, [name])
@@ -51,10 +52,10 @@ const DetailPage = () => {
                     alt="logo" />
             </div>
 
-            <div className="w-[90%] max-w-[600px] m-[auto]">
-                <Link className="bg-[#abc3f2] px-[16px] py-[4px] rounded-[10px] font-semibold" to={"/"}>Back</Link>
+            <div className="w-[90%] max-w-[600px] m-auto">
+                <Link className="bg-[#abc3f2] px-4 py-1 rounded-[10px] font-semibold" to={"/"}>Back</Link>
                 {pokemon.data && (
-                    <div className="rounded-lg overflow-hidden shadow dark:border-gray-700 p-[16px] m-[auto]">
+                    <div className="rounded-lg overflow-hidden shadow dark:border-gray-700 p-4 m-auto">
                         <div className="bg-center aspect-square w-full bg-cover rounded-[20px] relative h-[400px]">
                             <img
                                 className="absolute h-[auto] max-h-[400px] bg-cover aspect-square translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]"
