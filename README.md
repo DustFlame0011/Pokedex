@@ -8,7 +8,7 @@
 
 A modern and responsive **Pokédex** web application built with **React**, **TailwindCSS**, **React Router**, and **Zustand**. The app connects to a live **Pokémon API** to provide detailed Pokémon data, generation filtering, and real-time search.  
 
-**Demo:** [Live Demo Link](https://pokedex-search-silk.vercel.app/))  
+**Demo:** [Live Demo Link](https://pokedex-search-silk.vercel.app/)
 
 ---
 
