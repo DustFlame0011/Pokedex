@@ -8,11 +8,11 @@
 
 A modern and responsive **Pokédex** web application built with **React**, **TailwindCSS**, **React Router**, and **Zustand**. The app connects to a live **Pokémon API** to provide detailed Pokémon data, generation filtering, and real-time search.  
 
-**🔗 Demo:** [Live Demo Link](https://github.com/user-attachments/assets/f7dcffa8-828e-420f-9f3a-5407005c659c)  
+**Demo:** [Live Demo Link](https://github.com/user-attachments/assets/f7dcffa8-828e-420f-9f3a-5407005c659c)  
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 - **React.js** – Component-based UI development  
 - **React Router** – Client-side navigation  
 - **Zustand** – Lightweight and scalable state management  
@@ -21,7 +21,7 @@ A modern and responsive **Pokédex** web application built with **React**, **Tai
 
 ---
 
-## ✨ Features
+## Features
 - 🔍 **Search Pokémon** by name  
 - 🗂 **Filter by Generation**  
 - 📄 **Detailed Pokémon Info** (stats, types, images)  
@@ -32,7 +32,7 @@ A modern and responsive **Pokédex** web application built with **React**, **Tai
 
 ---
 
-## 🖼 Screenshots
+## Screenshots
 
 **Home Page**  
 <img width="1906" height="878" alt="Image" src="https://github.com/user-attachments/assets/99af3d1e-458a-4ab0-a54f-4548e8fa79f8" />  
@@ -42,7 +42,7 @@ A modern and responsive **Pokédex** web application built with **React**, **Tai
 
 ---
 
-## 🗂 Folder Structure
+## Folder Structure
 
 ```text
 pokedex/
